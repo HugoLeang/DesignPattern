@@ -26,3 +26,7 @@ Permet de créer des structures de classe complexe à l’aide de structure plus
 ## Behavioural Patterns
 
 Etend la flexibilité dans les interactions et de la distribution des responsabilité des objets.
+
+# Pattern Mystère
+Il semblerais que le pattern utilisé dans le pattern mystère est celui de Factory. Car les enfants de la super class
+Command peuvent alterer le type d'objet qu'ils crées et retournent.
