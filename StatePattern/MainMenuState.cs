@@ -1,5 +1,6 @@
 ﻿namespace DesignPattern.StatePattern;
-
+using MenuSystem;
+using StatePattern;
 public class MainMenuState : IState
 {
     public void Enter()
@@ -10,16 +11,20 @@ public class MainMenuState : IState
 
     public void Running(string command)
     {
-        throw new NotImplementedException();
+        switch (command)
+        {
+            case "CATALOG":
+                MenuSystem.Instance.SwitchState(new VehicleCatalogState());
+                break;
+        }
     }
 
     public void Exit()
     {
-        throw new NotImplementedException();
     }
 
     public void DisplayAvailableCommand()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("- CATALOG : Go to Catalog \n ");
     }
 }

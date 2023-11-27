@@ -18,18 +18,28 @@ public class MenuSystem
     
     private MenuSystem()
     {
-        SwitchState(new VehicleCatalogState());
+        SwitchState(new MainMenuState());
     }
     
     public void RunningMainLoop()
     {
         while (m_Running)
         {
+           
+            DisplayNavigationCommand();
             HandleUserInput("Enter a command: ");
-            if(m_UserInput.Equals("HELP"))
-                m_CurrentState.DisplayAvailableCommand();
-            else
-                m_CurrentState.Running(m_UserInput);    
+            switch (m_UserInput)
+            {
+                case "HELP":
+                    m_CurrentState.DisplayAvailableCommand();
+                    break;
+                case "MENU":
+                    SwitchState(new MainMenuState());
+                    break;
+                default:
+                    m_CurrentState.Running(m_UserInput);
+                    break;
+            }
         }
     }
 
@@ -45,14 +55,18 @@ public class MenuSystem
         m_CurrentState = newState;
         m_CurrentState.Enter();
     }
-
     public void ReturnToMainMenu()
     {
-        
+        SwitchState(new MainMenuState());
     }
     private void HandleUserInput(string prompt)
     {
         Console.WriteLine(prompt);
         m_UserInput = Console.ReadLine().ToUpper();
+    }
+
+    private void DisplayNavigationCommand()
+    {
+        Console.WriteLine("NAVIGATION COMMAND: (HELP / MENU)");
     }
 }
