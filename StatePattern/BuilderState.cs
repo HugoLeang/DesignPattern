@@ -6,11 +6,12 @@ public class BuilderState : IState
 {
     public void Enter()
     {
-        
+        DisplayAvailableCommand();
     }
 
     public void Running(string command)
     {
+        
         BuilderDirector director = new BuilderDirector();
         switch (command)
         {
@@ -33,6 +34,6 @@ public class BuilderState : IState
 
     public void DisplayAvailableCommand()
     {
-        
+        Console.WriteLine("AVAILLABLE COMMAND: \n - PDF : Get Builded document in PDF  \n - HTML : Get Builded document in HTML");
     }
 }
