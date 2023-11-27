@@ -16,6 +16,9 @@ public class MainMenuState : IState
             case "CATALOG":
                 MenuSystem.Instance.SwitchState(new VehicleCatalogState());
                 break;
+            case "BUILDER":
+                MenuSystem.Instance.SwitchState(new BuilderState());
+                break;
         }
     }
 
@@ -25,6 +28,7 @@ public class MainMenuState : IState
 
     public void DisplayAvailableCommand()
     {
-        Console.WriteLine("- CATALOG : Go to Catalog \n ");
+        Console.WriteLine("- CATALOG : Go to Catalog \n" +
+                          "- BUILDER : Go to Builder ");
     }
 }
