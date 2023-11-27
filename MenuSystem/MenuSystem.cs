@@ -36,6 +36,9 @@ public class MenuSystem
                 case "MENU":
                     SwitchState(new MainMenuState());
                     break;
+                case "EXIT":
+                    StopLoop();
+                    break;
                 default:
                     m_CurrentState.Running(m_UserInput);
                     break;

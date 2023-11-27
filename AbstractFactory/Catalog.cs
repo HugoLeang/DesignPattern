@@ -24,12 +24,12 @@ public class Catalog
         }
     }
 
-    public Scooter GetScooter()
+    public Scooter CreateScooter(string name,string color)
     {
-        return m_Factory.CreateScooter();
+        return m_Factory.CreateScooter(name,color);
     }
-    public Car GetCar()
+    public Car CreateCar(string name,string color)
     {
-        return m_Factory.CreateCar();
+        return m_Factory.CreateCar(name,color);
     }
 }

@@ -4,13 +4,13 @@ namespace DesignPattern;
 
 public class FuelVehicleFactory : IVehicleFactory
 {
-    public Car CreateCar()
+    public Car CreateCar(string name, string color)
     {
-        return new Car("Fuel Car", "Fuel Engine");
+        return new Car("Fuel Car", "Fuel Engine",color);
     }
 
-    public Scooter CreateScooter()
+    public Scooter CreateScooter(string name, string color)
     {
-        return new Scooter("Fuel Scooter", "Fuel Engine");
+        return new Scooter(name, "Fuel Engine",color);
     }
 }

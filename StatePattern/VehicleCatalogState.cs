@@ -16,13 +16,15 @@ public class VehicleCatalogState : IState
         {
             case"ELECTRIC":
                 Catalog electricCatalog = new Catalog(Catalog.CatalogType.ELECTRIC);
-                electricCatalog.GetCar().DisplayData();
-                electricCatalog.GetScooter().DisplayData();
+                electricCatalog.CreateCar("Super Eletric Car","Blue").DisplayData();
+                electricCatalog.CreateScooter("Super Eletric Scooter", "Red").DisplayData();
                 break;
             case"FUEL":
                 Catalog fuelCatalog = new Catalog(Catalog.CatalogType.FUEL);
-                fuelCatalog.GetCar().DisplayData();
-                fuelCatalog.GetScooter().DisplayData();
+                fuelCatalog.CreateCar("Old Fueled Car","Magenta").DisplayData();
+                fuelCatalog.CreateScooter("Old Fueled Scooter","Yellow").DisplayData();
+                break;
+            case"CREATE":
                 break;
             
         }
