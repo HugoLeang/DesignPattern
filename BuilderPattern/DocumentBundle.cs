@@ -21,7 +21,7 @@ public abstract class DocumentBundle
         m_DocumentContent += documementToAdd;
     }
 
-    public void PrintDocuement()
+    public void PrintDocument()
     {
         Console.WriteLine(m_DocumentContent);
     }

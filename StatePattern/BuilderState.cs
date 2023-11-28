@@ -17,11 +17,20 @@ public class BuilderState : IState
         {
             case "HTML":
                 director.BuildBundleDocument(BuilderDirector.Format.HTML);
-                director.GetResult().PrintDocuement();
+                director.GetResult().PrintDocument();
                 break;
             case "PDF":
                 director.BuildBundleDocument(BuilderDirector.Format.PDF);
-                director.GetResult().PrintDocuement();
+                director.GetResult().PrintDocument();
+                break;
+            case "CLONE":
+                director.BuildBundleDocument(BuilderDirector.Format.PDF);
+                DocumentBundlePDF original = (DocumentBundlePDF)director.GetResult();
+                DocumentBundlePDF copy = (DocumentBundlePDF)original.Clone();
+                original.AddDocument(" //// ORIGINAL //// ");
+                copy.AddDocument(" //// COPY //// ");
+                original.PrintDocument();
+                copy.PrintDocument();
                 break;
         }
         
@@ -34,6 +43,6 @@ public class BuilderState : IState
 
     public void DisplayAvailableCommand()
     {
-        Console.WriteLine("AVAILLABLE COMMAND: \n - PDF : Get Builded document in PDF  \n - HTML : Get Builded document in HTML");
+        Console.WriteLine("AVAILLABLE COMMAND: \n - PDF : Get Builded document in PDF  \n - HTML : Get Builded document in HTML \n - CLONE : Test clone documents");
     }
 }
