@@ -4,16 +4,18 @@ namespace DesignPattern.MenuSystem;
 
 public class MenuSystem
 {
-    public static MenuSystem Instance = null;
+    public static MenuSystem Instance { get; private set; }
     
     private bool m_Running = true;
     private IState m_CurrentState;
     private string m_UserInput;
 
-    public static void InitializeMenuSystem()
+    public static MenuSystem InitializeMenuSystem()
     {
         if (Instance == null)
             Instance = new MenuSystem();
+        
+        return Instance;
     }
     
     private MenuSystem()

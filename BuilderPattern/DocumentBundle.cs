@@ -1,8 +1,21 @@
 ﻿namespace DesignPattern.BuilderPattern;
 
-public class DocumentBundle
+public abstract class DocumentBundle
 {
-    private string m_DocumentContent;
+    public string m_DocumentContent { get; protected set; }
+
+    public DocumentBundle()
+    {
+        m_DocumentContent = "";
+    }
+
+    public DocumentBundle(DocumentBundle source)
+    {
+        m_DocumentContent = source.m_DocumentContent;
+    }
+
+    public abstract DocumentBundle Clone();
+
     public void AddDocument(string documementToAdd)
     {
         m_DocumentContent += documementToAdd;
@@ -12,4 +25,5 @@ public class DocumentBundle
     {
         Console.WriteLine(m_DocumentContent);
     }
+    
 }
