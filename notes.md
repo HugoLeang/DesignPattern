@@ -32,5 +32,4 @@ Il semblerais que le pattern utilisé dans le pattern mystère est celui de Fact
 Command peuvent alterer le type d'objet qu'ils crées et retournent.
 
 # Pattern Mystère - 2 
-Le nouveau pattern mystère est Strategy qui permet d'avoir un comportement générique qui peut être varié grâce à l'héritage.
-De ce fait il y a qu'une seule interface mais plusieurs implémentation différentes d'une stratégie.
+Le nouveau pattern mystère est Decorator, car elle permet d'englober un objet au sein d'un autre objet et d'étendre la fonctionnalité d'un objet grâce à sa "décoration".
