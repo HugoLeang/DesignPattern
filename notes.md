@@ -33,3 +33,8 @@ Command peuvent alterer le type d'objet qu'ils crées et retournent.
 
 # Pattern Mystère - 2 
 Le nouveau pattern mystère est Bridge qui permet de d'étendre de manière indépendante les fonctionnalités d'immatriculation ou de méthode d'affichage de manière indépendante.
+
+# Decorator - Framework 
+https://angular.io/api/core/Input
+Input est un Decorator Java qui permet d'ajouter des fonctionnalités à un champ et le lie au DOM.
+Quand ce champ change de donnée elle renvoi un signal au dom pour ce mettre à jour avec la bonne donnée
