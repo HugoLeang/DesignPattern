@@ -6,16 +6,15 @@ public class DecoratorState : IState
 {
     public void Enter()
     {
-      
+     DisplayAvailableCommand(); 
     }
 
     public void Running(string command)
     {
-        IEquipment baseItem = new Item("Sword");
+        Equipment baseItem = new Item("Sword");
         switch (command)
         {
             case "SIMPLE":
-              
                 EquipmentDecoratorFireEffect simpleFireDecorator = new EquipmentDecoratorFireEffect(baseItem);
                 simpleFireDecorator.UseItem();
                 break;
@@ -34,6 +33,7 @@ public class DecoratorState : IState
 
     public void DisplayAvailableCommand()
     {
-       
+        Console.WriteLine("- SIMPLE : Decorate with a simple Decorator \n" +
+                          "- COMPLEX : Decorate with two Decorator ");
     }
 }

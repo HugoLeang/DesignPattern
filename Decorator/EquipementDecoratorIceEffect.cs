@@ -2,13 +2,18 @@
 
 public class EquipementDecoratorIceEffect : EquipmentDecoratorBase
 {
-    public EquipementDecoratorIceEffect(IEquipment baseEquipment) : base(baseEquipment)
+    public EquipementDecoratorIceEffect(Equipment baseEquipment) : base(baseEquipment)
     {
     }
 
-    public void UseItem() 
+    public override void UseItem() 
     {
-        m_Equipment.UseItem();
+        base.UseItem();
         Console.WriteLine($"{m_Equipment.GetName()} => Play Ice effect !");
+    }
+
+    public override string GetName()
+    {
+        throw new NotImplementedException();
     }
 }

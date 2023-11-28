@@ -1,6 +1,6 @@
 ﻿namespace DesignPattern.Decorator;
 
-public class Item : IEquipment
+public class Item : Equipment
 {
     public string m_ItemName { get; private set; }
 
@@ -9,12 +9,12 @@ public class Item : IEquipment
         m_ItemName = name;
     }
     
-    public void UseItem()
+    public override void UseItem()
     {
         Console.WriteLine($"Using {m_ItemName} !");
     }
 
-    public string GetName()
+    public override string GetName()
     {
         return m_ItemName;
     }
