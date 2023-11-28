@@ -27,6 +27,10 @@ Permet de créer des structures de classe complexe à l’aide de structure plus
 
 Etend la flexibilité dans les interactions et de la distribution des responsabilité des objets.
 
-# Pattern Mystère
+# Pattern Mystère - 1 
 Il semblerais que le pattern utilisé dans le pattern mystère est celui de Factory. Car les enfants de la super class
 Command peuvent alterer le type d'objet qu'ils crées et retournent.
+
+# Pattern Mystère - 2 
+Le nouveau pattern mystère est Strategy qui permet d'avoir un comportement générique qui peut être varié grâce à l'héritage.
+De ce fait il y a qu'une seule interface mais plusieurs implémentation différentes d'une stratégie.
