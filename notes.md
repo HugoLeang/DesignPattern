@@ -32,4 +32,4 @@ Il semblerais que le pattern utilisé dans le pattern mystère est celui de Fact
 Command peuvent alterer le type d'objet qu'ils crées et retournent.
 
 # Pattern Mystère - 2 
-Le nouveau pattern mystère est Decorator, car elle permet d'englober un objet au sein d'un autre objet et d'étendre la fonctionnalité d'un objet grâce à sa "décoration".
+Le nouveau pattern mystère est Bridge qui permet de d'étendre de manière indépendante les fonctionnalités d'immatriculation ou de méthode d'affichage de manière indépendante.
