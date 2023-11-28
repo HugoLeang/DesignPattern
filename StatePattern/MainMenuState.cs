@@ -19,6 +19,9 @@ public class MainMenuState : IState
             case "BUILDER":
                 MenuSystem.Instance.SwitchState(new BuilderState());
                 break;
+            case "COMPOSITE":
+                MenuSystem.Instance.SwitchState(new CompanyTreeState());
+                break;
         }
     }
 
@@ -29,6 +32,7 @@ public class MainMenuState : IState
     public void DisplayAvailableCommand()
     {
         Console.WriteLine("- CATALOG : Go to Catalog \n" +
-                          "- BUILDER : Go to Builder ");
+                          "- BUILDER : Go to Builder \n" +
+                          "- COMPOSITE: Go to Composite \n ");
     }
 }
