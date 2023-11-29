@@ -1,0 +1,8 @@
+Name,Author,Borrowed,SMSNotify,EmailNotify
+Neuromancer,Gibson,FALSE,FALSE,FALSE
+Count Zero,Gibson,FALSE,FALSE,FALSE
+Mona Lisa Overdrive,Gibson,TRUE,TRUE,TRUE
+Dune,Herbert,FALSE,FALSE,FALSE
+La Horde du Contrevent,Damasio,TRUE,TRUE,FALSE
+Premiere Fondation,Asimov,FALSE,FALSE,FALSE
+Seconde Fondation,Asimov,TRUE,FALSE,TRUE
