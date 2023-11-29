@@ -4,6 +4,12 @@ using DesignPattern.StatePattern;
 
 public class BookManagementState : State 
 {
+    public override void Enter()
+    {
+        Console.WriteLine("=== BOOK MANAGEMENT ===");
+        base.Enter();
+    }
+
     public override void Running(string command)
     {
         switch (command)
