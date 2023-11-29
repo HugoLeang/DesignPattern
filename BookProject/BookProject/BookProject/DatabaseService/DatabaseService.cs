@@ -30,17 +30,7 @@ public class DatabaseService
         bookModels = csv.GetRecords<BookModel>().ToList();
         return ParseBookModels(bookModels);
     }
-
-    public void UpdateBook(Book bookToUpdate)
-    {
-        
-    }
-
-    public void WriteBook(Book bookToWrite)
-    {
-        
-    }
-
+    
     private List<Book> ParseBookModels(List<BookModel> bookModels)
     {
         List<Book> books = new List<Book>();

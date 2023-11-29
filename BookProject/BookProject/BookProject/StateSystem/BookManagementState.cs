@@ -25,7 +25,6 @@ public class BookManagementState : State
     public override void DisplayAvailableCommand()
     {
         Console.WriteLine("- LIST : List all the books \n" +
-                          "- UPDATE : Update a book \n" +
                           "- NOTIFY : Notify for restitution \n ");
     }
 
