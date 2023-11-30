@@ -37,4 +37,8 @@ Le nouveau pattern mystère est Bridge qui permet de d'étendre de manière ind�
 # Decorator - Framework 
 https://angular.io/api/core/Input
 Input est un Decorator Java qui permet d'ajouter des fonctionnalités à un champ et le lie au DOM.
-Quand ce champ change de donnée elle renvoi un signal au dom pour ce mettre à jour avec la bonne donnée
+Quand ce champ change de donnée elle renvoi un signal au dom pour ce mettre à jour avec la bonne donnée.
+
+# Iterator Contexte
+Iterator à pour but de proposer plusieurs façon d'itérer à travers une collection selon les besoins tout en séparant le "comment" itérer à travers plusieurs class. 
+De ce fait l'implémentation de la collection contient uniquement les itérations compatibles pour celui-ci.
